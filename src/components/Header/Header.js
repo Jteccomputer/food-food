@@ -23,13 +23,13 @@ function Header() {
         <nav>
             <ul>
                 {
-                    user? (
+                    user ? (
                     <li className={classes.menu_container}>
                         <Link to="/profile">{user.name}</Link>
                         <div className={classes.menu}>
                             <Link to="/profile">Profile</Link>
                             <Link to="/orders">Orders</Link>
-                            <a onClick={logout}>Logout</a>
+                            <a href onClick={logout}>Logout</a>
                         </div>
 
                     </li>

@@ -1,13 +1,13 @@
 import Header from "./components/Header/Header";
+import AppRoutes from "./AppRoutes";
 
 
-
-function App() {
+export default function App() {
   return (
     <>
       <Header/>
+      <AppRoutes />
     </>
   );
 }
 
-export default App;

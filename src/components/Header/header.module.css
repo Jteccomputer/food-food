@@ -56,7 +56,7 @@
 }
 
 .card_count{
-    background-color: #ff4d4d;
+    background-color: hsl(263, 89%, 28%);
     color: white;
     padding: 1rem, 2rem;
     border-radius: 10rem;
