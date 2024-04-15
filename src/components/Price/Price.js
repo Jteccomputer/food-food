@@ -11,7 +11,9 @@ export default function Price({price, locale, currency})
   return <span>{formatPrice()}</span>
 }
 
+
 Price.defaultProps = {
   locale: 'en-US',
   currency: 'USD',
 };
+

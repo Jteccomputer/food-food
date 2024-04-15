@@ -9,7 +9,7 @@ export const sample_foods = [
     origins: ["Italy"],
     stars: 4.5,
     imageUrl: "food-1.jpeg",
-    tags:["fastfood", "Pizza", "Lunch"],
+    tags:["FastFood", "Pizza", "Lunch"],
 
   },
   
@@ -19,20 +19,20 @@ export const sample_foods = [
     price:20,
     cookTime: "20-30",
     favorite:true,
-    origins: ["Persia", "Middle east", "China"],
+    origins: ["Persia", "Middleeast", "China"],
     stars: 5,
     imageUrl: "food-2.jpeg",
-    tags:["Slow Food", "Lunch"],
+    tags:["SlowFood", "Lunch"],
 
   },
 
   {
     id:'3',
-    name: "hamburger",
+    name: "Hamburger",
     price:5,
     cookTime: "20-30",
     favorite:false,
-    origins: ["Germany", "US"],
+    origins: ["Germany","US"],
     stars: 3.5,
     imageUrl: "food-3.jpeg",
     tags:["FastFood", "Hamburger"],
@@ -78,4 +78,15 @@ export const sample_foods = [
 
   }
 
+];
+
+export const sample_tags=[
+  {name: 'All', count: 6},
+  {name: 'FastFood', count: 4},
+  {name: 'Pizza', count: 2},
+  {name: 'Lunch', count: 3},
+  {name: 'SlowFood', count: 2},
+  {name: 'Hamburger', count: 1},
+  {name: 'Fry', count: 1},
+  {name: 'Soup', count: 1},
 ];
