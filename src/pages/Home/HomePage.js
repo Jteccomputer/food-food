@@ -4,6 +4,7 @@ import Tags from '../../components/Tags/Tags';
 import { useParams } from 'react-router-dom';
 import { getAll, getAllTags, getAllByTag, search } from '../../services/foodService';
 import Thumbnails from '../../components/Thumbnails/Thumbnails';
+import NotFound from '../../components/NotFound/NotFound';
 
 const initialState = { foods: [], tags: [] };
 
@@ -39,6 +40,7 @@ export default function HomePage()
     <> 
       <Search />
       <Tags tags={tags} />
+      {foods.length === 0 && <NotFound/>}
       <Thumbnails foods={foods} />
     </>
   );

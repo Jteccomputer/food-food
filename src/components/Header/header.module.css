@@ -25,12 +25,12 @@
     padding: 1rem;
 }
 
-.header ul {
+.header ul{
     display: flex;
     list-style-type: none;
     margin: 0;
 }
-.header ul a {
+.header ul a{
     padding: 1rem;
     display: inline-block;
 }
@@ -55,10 +55,10 @@
     min-width: 8rem;
 }
 
-.card_count{
-    background-color: hsl(263, 89%, 28%);
+.cart_count{
+    background-color: green;
     color: white;
-    padding: 1rem, 2rem;
+    padding: 2rem, 2rem;
     border-radius: 10rem;
-    font-size: 2rem;
+    font-size: 1rem;
 }
