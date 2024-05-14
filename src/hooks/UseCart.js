@@ -1,12 +1,11 @@
 import React, {createContext, useContext, useEffect, useState } from 'react';
-import { sample_foods } from '../data';
 
 const CartContext = createContext(null);
 
 const CART_KEY = 'cart';
 
 const EMPTY_CART = {
-    items:[],
+    items: [],
     totalPrice: 0,
     totalCount: 0,
 };
@@ -27,22 +26,24 @@ export default function CartProvider({children})
         setTotalCount(totalCount);
 
         localStorage.setItem(
-            CART_KEY, JSON.stringify({
+            CART_KEY, 
+            JSON.stringify({
                 items: cartItems,
                 totalPrice,
                 totalCount,
            })
+           
         );
-
     }, [cartItems]);
-
+    
     function getCartFromLocalStorage(){
         const storedCart = localStorage.getItem(CART_KEY);
         return storedCart ? JSON.parse(storedCart) : EMPTY_CART;
     }
 
+    // creating a helper function
     const sum = items => {
-        return items.reduce((prevValue, curValue) => prevValue + curValue, 0)
+        return items.reduce((prevValue, curValue) => prevValue + curValue, 0);
     };
 
     const removeFromCart = foodId => {
@@ -68,13 +69,14 @@ export default function CartProvider({children})
         const cartItem = cartItems.find(item => item.food.id === food.id);
         if (cartItem) {
             changeQuantity(cartItem, cartItem.quantity + 1);
-        }else{
+        }
+        else{
             setCartItems([...cartItems, { food, quantity:1, price: food.price }]);
         }
     };
     return (<CartContext.Provider 
         value={{ 
-         cart:{items: cartItems, totalPrice, totalCount },
+         cart: { items: cartItems, totalPrice, totalCount },
         removeFromCart, 
         changeQuantity,
         addToCart,

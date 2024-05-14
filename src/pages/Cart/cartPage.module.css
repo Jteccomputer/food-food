@@ -51,16 +51,18 @@
     font-weight: 100;
 }
 
+
 .list .remove_button{
     border-radius: 1rem;
     border: none;
     padding: 0.5rem;
+    margin: 1rem;
     color:#e79292;
-    opacity: 2;
+    opacity: 0.7;
     outline: none;
     background-color: aliceblue;
     text-align: center;
-    justify-self: center;
+
 }
 
 .list .remove_button:hover{
