@@ -10,6 +10,7 @@ import { useAuth } from '../../hooks/useAuth';
 
 export default function RegisterPage() {
   const auth = useAuth();
+  // get the user from the useAuth
   const { user } = auth;
   const navigate = useNavigate();
   const [params] = useSearchParams();
